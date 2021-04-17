@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: kubeserve
   labels:
-    run: nginx-frontend
-    name: nginx-frontend
+    app: kubeserve
 spec:
   replicas: 3
   selector:
     matchLabels:
-      run: nginx-frontend
+      app: kubeserve
   template:
     metadata:
       labels:
-        run: nginx-frontend
+        app: kubeserve
     spec:
       containers:
-      - name: nginx-frontend
-        image: bitnami/nginx
+      - name: nginx
+        image: nginx
+        ports:
+          - containerPort: 80
