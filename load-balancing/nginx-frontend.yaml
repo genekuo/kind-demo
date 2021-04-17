@@ -5,7 +5,6 @@ metadata:
   labels:
     run: nginx-frontend
     name: nginx-frontend
-  strategy: {}
 spec:
   replicas: 3
   selector:
