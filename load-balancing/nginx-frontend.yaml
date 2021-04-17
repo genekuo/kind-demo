@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx-frontend
+    name: nginx-frontend
+strategy: {}
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: nginx-frontend
+  template:
+    metadata:
+      labels:
+        run: nginx-frontend
+    spec:
+      containers:
+      - name: nginx-frontend
+        image: bitnami/nginx
