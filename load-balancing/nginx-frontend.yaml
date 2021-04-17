@@ -1,8 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-name: nginx-frontend
 metadata:
-  creationTimestamp: null
   labels:
     run: nginx-frontend
     name: nginx-frontend
