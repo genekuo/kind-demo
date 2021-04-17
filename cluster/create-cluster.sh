@@ -28,7 +28,7 @@ echo -e "\n \n******************************************************************
 echo -e "Step 3: Create KinD Cluster using cluster01-kind.yaml configuration"
 echo -e "*******************************************************************************************************************"
 tput setaf 3
-kind create cluster --name cluster01 --config cluster01-kind.yaml
+kind create cluster --name cluster01 --config cluster01-multi.yaml
 
 tput setaf 5
 #Install Calico
